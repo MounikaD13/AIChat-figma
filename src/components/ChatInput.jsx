@@ -1,27 +1,3 @@
-// import { Paperclip, Image, Send } from "lucide-react";
-
-// export default function ChatInput() {
-//   return (
-//     <div className="border-t border-white/10 px-6 py-3">
-//       <div className="flex items-center gap-3 bg-[#2a2a2a] rounded-lg px-4 py-2">
-
-//         <Paperclip size={18} className="opacity-70" />
-//         <Image size={18} className="opacity-70" />
-
-//         <input
-//           className="flex-1 bg-transparent outline-none text-sm"
-//           placeholder="Ask me anything..."
-//         />
-
-//         <span className="text-xs opacity-50">0/1500</span>
-
-//         <Send size={18} />
-
-//       </div>
-//     </div>
-//   );
-// }
-
 import React, { useState } from 'react'
 
 export default function ChatInput() {
