@@ -4,14 +4,22 @@ export default function ChatInput() {
   const [text, setText] = useState("");
 
   return (
-    <div className='p-[30px]'>
+    <div className='p-[22px]'>
       <div className='flex flex-col gap-[40px] 2xl:gap-[80px]'>
         <div className='flex flex-col gap-[27px] 2xl:gap-[32px]'>
-          <div className='flex flex-col items-center justify-center'>
-            <img src="/images/User Avatar.png" alt="" className='w-[100px] h-[100px] rounded-full object-cover' />
+          <div className="flex flex-col items-center justify-center">
+            <div className="relative">
+             {/* Glow  */}
+              <div className="absolute inset-0 rounded-full blur-xl bg-gradient-to-r from-orange-400 via-blue-400 to-orange-300 opacity-30"></div>              <img
+                src="/images/User Avatar.png"
+                alt=""
+                className="relative w-[100px] h-[100px] rounded-full object-cover"
+              />
+            </div>
             <p className='text-sm 2xl:text-[17px] text-gray-500'>Good Morning John</p>
             <h1 className='text-[17px] md:text-[23px] 2xl:text-[25px] font-medium'>How can i assist you today?</h1>
           </div>
+
           {/* cards */}
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:px-8 lg:px-12">
             <div className=" bg-[#FFFFFF]/10  rounded-[16px] p-[20px]">
