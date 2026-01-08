@@ -6,19 +6,19 @@ export default function Sidebar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-[#121212] text-white text-xs">
+    <div className="flex h-[100hv] lg:h-screen text-white text-xs" >
       {/*DESKTOP*/}
       <aside
         className={`
           hidden lg:flex flex-col
-          h-screen bg-[#121212] border-r border-white/10
+          h-[105vh] bg-[#121212] border-r border-white/10
           transition-all duration-300 ease-in-out
           ${open ? "w-[260px]" : "w-[72px]"}
           overflow-hidden
         `}
       >
         <div className="flex items-center justify-between px-4 h-14">
-          <span className={`font-bold text-lg ${!open && "hidden"}`}>
+          <span className={`font-bold mt-[7px] text-lg ${!open && "hidden"}`}>
             <img src="/images/Logo.png" alt="" />
           </span>
 
@@ -91,7 +91,7 @@ export default function Sidebar() {
           {/* Drawer */}
           <aside
             className="
-              relative h-screen bg-[#0f0f0f] flex flex-col
+              relative h-screen max-[340px]:h-[107vh] bg-[#0f0f0f] flex flex-col
               w-full md:w-[260px]
               p-4 overflow-y-auto
             "
@@ -155,8 +155,8 @@ export default function Sidebar() {
       <main className="flex-1 relative z-10">
         <Top onMenuClick={() => setOpen(true)} />
         <div className={open ? "md:hidden lg:block" : ""}>
-  <ChatInput />
-</div>
+          <ChatInput />
+        </div>
       </main>
     </div>
   );
