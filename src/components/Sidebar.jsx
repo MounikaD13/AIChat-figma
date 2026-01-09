@@ -28,18 +28,18 @@ export default function Sidebar() {
         </div>
 
         {/* Menu */}
-        <div className="px-2 mt-4 space-y-1 w-[268px]">
+        <ul className="px-2 mt-2 space-y-1 w-[268px]">
           {open && <p className="text-gray-500">General</p>}
-          <MenuItem icon="/images/tabler-icon-brand-hipchat.png" label="AI Chat" open={open} />
-          <MenuItem icon="/images/Vector.png" label="AI Video" open={open} />
-          <MenuItem icon="/images/tabler-icon-photo.png" label="AI Image" open={open} />
-          <MenuItem icon="/images/tabler-icon-code.png" label="AI Development" open={open} />
+          <Menu icon="/images/tabler-icon-brand-hipchat.png" label="AI Chat" open={open} onClick={() => setOpen(false)}/>
+          <Menu icon="/images/Vector.png" label="AI Video" open={open} onClick={() => setOpen(false)} />
+          <Menu icon="/images/tabler-icon-photo.png" label="AI Image" open={open} onClick={() => setOpen(false)}/>
+          <Menu icon="/images/tabler-icon-code.png" label="AI Development" open={open} onClick={() => setOpen(false)} />
           {open && <p className="text-gray-500">Previous Chat</p>}
-          <MenuItem icon="/images/Inbox Icon.png" label="Describe the benefits for a..." open={open} />
-          <MenuItem icon="/images/Inbox Icon.png" label="Generate a list current we..." open={open} />
-          <MenuItem icon="/images/Inbox Icon.png" label="Condense the following se..." open={open} />
-          <MenuItem icon="/images/Inbox Icon.png" label="Describe what post moder..." open={open} />
-        </div>
+          <Menu icon="/images/Inbox Icon.png" label="Describe the benefits for a..." open={open} onClick={() => setOpen(false)} />
+          <Menu icon="/images/Inbox Icon.png" label="Generate a list current we..." open={open} onClick={() => setOpen(false)} />
+          <Menu icon="/images/Inbox Icon.png" label="Condense the following se..." open={open} onClick={() => setOpen(false)} />
+          <Menu icon="/images/Inbox Icon.png" label="Describe what post moder..." open={open} onClick={() => setOpen(false)}  />
+        </ul>
 
         {/* Bottom Section */}
         {open && (
@@ -104,18 +104,18 @@ export default function Sidebar() {
             </div>
 
             {/* Menu */}
-            <div className="space-y-1 mt-4">
+            <ul className="space-y-1 mt-4">
               <p>General</p>
-              <MenuItem icon="/images/tabler-icon-brand-hipchat.png" label="AI Chat" open />
-              <MenuItem icon="/images/Vector.png" label="AI Video" open />
-              <MenuItem icon="/images/tabler-icon-photo.png" label="AI Image" open />
-              <MenuItem icon="/images/tabler-icon-code.png" label="AI Development" open />
+              <Menu icon="/images/tabler-icon-brand-hipchat.png" label="AI Chat" open onClick={() => setOpen(false)} />
+              <Menu icon="/images/Vector.png" label="AI Video" open onClick={() => setOpen(false)} />
+              <Menu icon="/images/tabler-icon-photo.png" label="AI Image" open onClick={() => setOpen(false)} />
               <p>Previous Chat</p>
-              <MenuItem icon="/images/Inbox Icon.png" label="Describe the benefits for a..." open />
-              <MenuItem icon="/images/Inbox Icon.png" label="Generate a list current we..." open />
-              <MenuItem icon="/images/Inbox Icon.png" label="Condense the following se..." open />
-              <MenuItem icon="/images/Inbox Icon.png" label="Describe what post moder..." open />
-            </div>
+              <Menu icon="/images/Inbox Icon.png" label="Describe the benefits for a..." open onClick={() => setOpen(false)} />
+              <Menu icon="/images/Inbox Icon.png" label="Generate a list current we..." open onClick={() => setOpen(false)} />
+              <Menu icon="/images/Inbox Icon.png" label="Condense the following se..." open onClick={() => setOpen(false)} />
+              <Menu icon="/images/Inbox Icon.png" label="Describe what post moder..." open onClick={() => setOpen(false)} />
+            </ul>
+
 
             {/* Bottom */}
             <div className="mt-auto pt-3">
@@ -162,11 +162,21 @@ export default function Sidebar() {
   );
 }
 
-function MenuItem({ icon, label, open }) {
+function Menu({ icon, label, open, onClick }) {
   return (
-    <div className="flex items-center gap-3 px-[16px] py-2 rounded-lg hover:bg-white/5">
-      <img src={icon} />
-      {open && <span className="text-sm whitespace-nowrap">{label}</span>}
-    </div>
+    <li
+      onClick={onClick}
+      className="
+        flex items-center gap-3
+        px-[16px] py-2 rounded-lg
+        hover:bg-white/5
+        cursor-pointer
+        list-none me-3
+      "
+    >
+      <img src={icon} alt="" />
+      {open && <span className="text-sm">{label}</span>}
+    </li>
   );
 }
+
