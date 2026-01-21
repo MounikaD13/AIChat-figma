@@ -24,13 +24,13 @@ export default function ChatInput() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:px-8 lg:px-12">
             <div className=" bg-[#FFFFFF]/10  rounded-[16px] p-[20px]">
               <img src="/images/Logomark.png" alt="" />
-              <h3 className="text-[12px] md:text-[14px] lg:text-[19px] text-[#FFFFFF]/50 mt-[10px]">
+              <h3 className="text-[12px] md:text-[14px] lg:text-[16px] text-[#FFFFFF]/50 mt-[10px]">
                 Help Me To Create A Personal Branding And Web Pages
               </h3>
             </div>
             <div className=" bg-[#FFFFFF]/10  rounded-[16px] p-[20px]">
               <img src="/images/Logomark (1).png" alt="" />
-              <h3 className="text-[12px] md:text-[14px] lg:text-[19px] text-[#FFFFFF]/50 mt-[10px]">
+              <h3 className="text-[12px] md:text-[14px] lg:text-[16px] text-[#FFFFFF]/50 mt-[10px]">
                 Write A Report Based On My Website Data
               </h3>
             </div>
@@ -44,7 +44,7 @@ export default function ChatInput() {
     lg:mx-0
   ">
               <img src="/images/Logomark (2).png" alt="" />
-              <h3 className="md:text-[14px] lg:text-[19px] text-[#FFFFFF]/50 mt-[10px]">
+              <h3 className="md:text-[14px] lg:text-[16px] text-[#FFFFFF]/50 mt-[10px]">
                 Write A Tailored Engaging Content, With A Focus Quality
               </h3>
             </div>
@@ -102,7 +102,7 @@ export default function ChatInput() {
               </div>
             </div>
           </div>
-          <h3 className='md:text-[14px] lg:text-[19px] text-center justify-center mt-4 2xl:mt-7'>
+          <h3 className='md:text-[14px] 2xl:text-[19px] text-center justify-center mt-4 2xl:mt-7'>
             <span className='text-[#FFFFFF]/50'>Centra may display inaccurate info, so please double check the response.</span>
             <span className='text-white'>Your Privacy & Center AI</span>
           </h3>
