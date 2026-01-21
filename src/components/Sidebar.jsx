@@ -207,7 +207,7 @@ export default function Sidebar() {
             </ul>
 
             {/* Bottom */}
-            <div className="pt-3">
+            <div className="mt-auto pt-3">
               <div className="bg-[#5865f2] rounded-xl p-3">
                 <div className="flex items-start gap-1">
                   <img
