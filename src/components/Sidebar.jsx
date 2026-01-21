@@ -3,15 +3,12 @@ import Top from "./Top";
 import ChatInput from "./ChatInput";
 
 export default function Sidebar() {
-  // ✅ Desktop sidebar should be OPEN by default
   const [desktopOpen, setDesktopOpen] = useState(true);
-
-  // ✅ Mobile drawer should be CLOSED by default
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div className="flex h-[100hv] lg:h-screen text-white text-xs">
-      {/* ================= DESKTOP (lg and above) ================= */}
+      {/* DESKTOP*/}
       <aside
         className={`
           hidden lg:flex flex-col
@@ -133,10 +130,9 @@ export default function Sidebar() {
         )}
       </aside>
 
-      {/* ================= MOBILE & TABLET DRAWER ================= */}
+      {/* MOBILE & TABLET */}
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 z-[999]">
-          {/* Overlay */}
           <div
             className="absolute inset-0 bg-black/40        
                        md:bg-zinc-700/100
@@ -145,7 +141,6 @@ export default function Sidebar() {
             onClick={() => setMobileOpen(false)}
           />
 
-          {/* Drawer */}
           <aside
             className="
               relative h-screen max-[340px]:h-[107vh] bg-[#0f0f0f] flex flex-col
@@ -257,12 +252,10 @@ export default function Sidebar() {
         </div>
       )}
 
-      {/* ================= MAIN CONTENT ================= */}
+      {/* MAIN CONTENT*/}
       <main className="flex-1 relative z-10">
-        {/* ✅ This opens ONLY mobile drawer */}
+        {/*opens ONLY mobile drawer */}
         <Top onMenuClick={() => setMobileOpen(true)} />
-
-        {/* ChatInput stays same */}
         <div className={mobileOpen ? "md:hidden lg:block" : ""}>
           <ChatInput />
         </div>
