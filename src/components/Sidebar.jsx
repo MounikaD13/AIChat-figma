@@ -40,25 +40,25 @@ export default function Sidebar() {
             icon="/images/tabler-icon-brand-hipchat.png"
             label="AI Chat"
             open={desktopOpen}
-            onClick={() => {}}
+            onClick={() => setDesktopOpen(false)}
           />
           <Menu
             icon="/images/Vector.png"
             label="AI Video"
             open={desktopOpen}
-            onClick={() => {}}
+            onClick={() => setDesktopOpen(false)}
           />
           <Menu
             icon="/images/tabler-icon-photo.png"
             label="AI Image"
             open={desktopOpen}
-            onClick={() => {}}
+            onClick={() => setDesktopOpen(false)}
           />
           <Menu
             icon="/images/tabler-icon-code.png"
             label="AI Development"
             open={desktopOpen}
-            onClick={() => {}}
+            onClick={() => setDesktopOpen(false)}
           />
 
           {desktopOpen && <p className="text-gray-500">Previous Chat</p>}
@@ -67,25 +67,25 @@ export default function Sidebar() {
             icon="/images/Inbox Icon.png"
             label="Describe the benefits for a..."
             open={desktopOpen}
-            onClick={() => {}}
+            onClick={() => setDesktopOpen(false)}
           />
           <Menu
             icon="/images/Inbox Icon.png"
             label="Generate a list current we..."
             open={desktopOpen}
-            onClick={() => {}}
+            onClick={() => setDesktopOpen(false)}
           />
           <Menu
             icon="/images/Inbox Icon.png"
             label="Condense the following se..."
             open={desktopOpen}
-            onClick={() => {}}
+            onClick={() => setDesktopOpen(false)}
           />
           <Menu
             icon="/images/Inbox Icon.png"
             label="Describe what post moder..."
             open={desktopOpen}
-            onClick={() => {}}
+            onClick={() => setDesktopOpen(false)}
           />
         </ul>
 
